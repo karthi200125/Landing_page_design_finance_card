@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Hero = () => {
+const Package = () => {
     return (
         <section className='min-h-[600px] bg-red-400'>
-            Hero
+            Hepackagero
         </section>
     )
 }
 
-export default Hero
+export default Package
