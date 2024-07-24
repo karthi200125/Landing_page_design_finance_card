@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import RoundeBtn from './RoundeBtn';
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io';
@@ -13,40 +13,33 @@ const Testimonial = () => {
 
     const testimonialdata = [
         {
-            id: 1,
+            id: 0,
             name: 'username',
             img: profile1.src,
             date: '20/05/2001',
             feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit asperiores quibusdam odio esse autem dolorum.',
         },
         {
-            id: 2,
+            id: 1,
             name: 'username',
             img: profile2.src,
             date: '20/05/2001',
             feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit asperiores quibusdam odio esse autem dolorum.',
         },
         {
-            id: 3,
+            id: 2,
             name: 'username',
             img: profile3.src,
             date: '20/05/2001',
             feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit asperiores quibusdam odio esse autem dolorum.',
         },
         {
-            id: 4,
+            id: 3,
             name: 'username',
             img: profile4.src,
             date: '20/05/2001',
             feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit asperiores quibusdam odio esse autem dolorum.',
         },
-        // {
-        //     id: 5,
-        //     name: 'username',
-        //     img: profile1.src,
-        //     date: '20/05/2001',
-        //     feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit asperiores quibusdam odio esse autem dolorum.',
-        // },
     ];
 
     return (
@@ -54,14 +47,14 @@ const Testimonial = () => {
             <h2>What Tell People Us People?</h2>
             <p>We have 12K feedback from our customer</p>
 
-            <div className={`w-full flex flex-row items-center justify-between gap-5`}>
+            <div className={`w-full flex flex-row items-center justify-start gap-5`}>
                 {testimonialdata?.map((data, index) => (
                     <div
                         key={data?.id}
-                        className={`transition-all duration-500 ease-in-out h-[450px] hover:bg-black cursor-pointer rounded-[30px] bg-[var(--gray)] p-5 relative group overflow-hidden ${hoveredCard === index ? 'w-[600px] z-10' : 'w-[330px]'
+                        className={`transition-all duration-500 ease-in-out h-[400px] xl:h-[450px] ${hoveredCard === index ? "bg-black" : "bg-[var(--gray)]"} hover:bg-black cursor-pointer rounded-[30px] p-5 relative group overflow-hidden ${hoveredCard === index ? 'w-[450px] lg:w-[600px] z-10' : 'w-[250px] lg:w-[330px]'
                             }`}
                         onMouseEnter={() => setHoveredCard(index)}
-                        onMouseLeave={() => setHoveredCard(null)}
+                        onMouseLeave={() => setHoveredCard(index)}
                         style={{
                             transform:
                                 hoveredCard === index
@@ -75,7 +68,7 @@ const Testimonial = () => {
                     >
                         {/* img container */}
                         <div
-                            className={`absolute top-3 left-3 transition-all duration-500 ease-in-out rounded-[20px] overflow-hidden flex flex-col justify-between gap-3 ${hoveredCard === index ? 'w-[50%] h-[430px]' : 'w-[100px] h-[100px]'
+                            className={`absolute top-3 left-3 transition-all duration-500 ease-in-out rounded-[20px] overflow-hidden flex flex-col justify-between gap-3 ${hoveredCard === index ? 'w-[50%] h-[380px] xl:h-[430px]' : 'w-[100px] h-[100px]'
                                 }`}
                         >
                             <img
@@ -92,8 +85,8 @@ const Testimonial = () => {
                             )}
                         </div>
 
-                        {/* top right data */}
-                        <div className='absolute top-3 right-3 px-5 h-[40px] flex items-center justify-center rounded-full bg-white max-w-max font-semibold text-sm'>
+                        {/* top right date */}
+                        <div className={`${hoveredCard === index ? "hidden lg:flex" : "hidden xl:flex"} absolute top-3 right-3 px-5 h-[40px] items-center justify-center rounded-full bg-white max-w-max font-semibold text-sm`}>
                             {data?.date}
                         </div>
 
@@ -103,7 +96,7 @@ const Testimonial = () => {
                                 }`}
                         >
                             <img src={star.src} alt='' className='w-[70px] h-[70px] object-contain' />
-                            <h4 className='line-clamp-5 text-neutral-500'>{`"${data?.feedback}"`}</h4>
+                            <h4 className='line-clamp-2 md:line-clamp-3 lg:line-clamp-4 xl:line-clamp-5 text-neutral-500'>{`"${data?.feedback}"`}</h4>
                         </div>
                     </div>
                 ))}
