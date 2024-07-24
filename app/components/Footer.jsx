@@ -23,12 +23,12 @@ const Footer = () => {
         <Logo type='footer' />
         <h4 className='text-neutral-500 text-center sm:text-start'>Discover the power of our and rewarding credit cards</h4>
         <Button>Enter email address</Button>
-        <div className='flex flex-row items-center p-3 bg-white rounded-full max-w-max'>
+        {/* <div className='flex flex-row items-center p-3 bg-white rounded-full max-w-max'>
           <img src={logoimg.src} alt="" className='w-8 h-8 rounded-full' />
           <img src={logoimg.src} alt="" className='w-8 h-8 rounded-full' />
           <img src={logoimg.src} alt="" className='w-8 h-8 rounded-full' />
           <img src={logoimg.src} alt="" className='w-8 h-8 rounded-full' />
-        </div>
+        </div> */}
       </div>
 
       {/* mid */}

@@ -1,5 +1,6 @@
 import React from 'react'
 import star from '../../public/star.png'
+import graph from '../../public/graph.webp'
 import RoundeBtn from './RoundeBtn'
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 import Button from './Button';
@@ -26,6 +27,7 @@ const Package = () => {
                 {/* top right */}
                 <div className='hidden sm:flex absolute top-3 right-3 w-[200px] h-[200px] rounded-[20px]  bg-[var(--white)] p-5 flex-col justify-between'>
                     <h4>Copa pack</h4>
+                    <img src={graph.src} alt="" className='w-full object-contain h-[70px]'/>
                     <h4 className='flex flex-row items-center justify-between'>123$
                         <RoundeBtn icon={<IoIosArrowRoundForward size={20} className='-rotate-45' />} />
                     </h4>
