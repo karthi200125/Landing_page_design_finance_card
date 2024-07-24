@@ -40,8 +40,8 @@ const Navbar = () => {
       <div className='flex h-[50px] rounded-full px-3 flex-row items-center z-[99]'>
         <div className='lg:hidden'>menu</div>
         {navlinks.map((nav) => (
-          <Magnete>
-            <Link href='' key={nav.id} className='hidden lg:flex px-4 py-2  text-sm rounded-full border text-white hover:bg-white hover:text-black cursor-pointer'>{nav?.title}</Link>
+          <Magnete key={nav.id}>
+            <Link href='' className='hidden lg:flex px-4 py-2  text-sm rounded-full border text-white hover:bg-white hover:text-black cursor-pointer'>{nav?.title}</Link>
           </Magnete>
         ))}
       </div>

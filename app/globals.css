@@ -64,6 +64,7 @@ h4 {
   transform: translate(-50%, -50%);
   z-index: 1;
   transition: width 0.5s, height 0.5s;
+  z-index: 98;
 }
 
 .custom-cursor-hovered {
