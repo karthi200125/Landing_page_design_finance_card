@@ -19,10 +19,148 @@ body {
   @apply w-full h-full bg-[var(--white)]
 }
 
+.border {
+  @apply border-[1px] border-solid border-neutral-200
+}
+
 section {
   @apply p-4 md:p-6 xl:p-8 2xl:p-10
 }
 
 h2 {
   @apply text-5xl font-semibold
+}
+
+h3 {
+  @apply text-xl font-semibold
+}
+
+
+h4 {
+  @apply text-lg font-semibold
+}
+
+
+
+/* pcakesection */
+
+/* top left */
+.packtopleft::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  top: -2px;
+  right: -48.5px;
+  box-shadow: -10px -10px 0 white;
+}
+
+.packtopleft::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  bottom: -48.5px;
+  left: -2px;
+  box-shadow: -10px -10px 0 white;
+}
+
+.packbottomright::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: var(--gray);
+  border-radius: 50%;
+  bottom: -0.5px;
+  left: -49px;
+  box-shadow: 10px 10px 0 white;
+}
+
+.packbottomright::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: var(--gray);
+  border-radius: 50%;
+  top: -49px;
+  right: -1px;
+  box-shadow: 10px 10px 0 white;
+}
+
+.footercurve::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--black);
+  border-radius: 50%;
+  top: -0px;
+  left: -39.8px;
+  box-shadow: 20px -20px 0 white;
+}
+
+.footercurve::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--black);
+  border-radius: 50%;
+  right: -39.8px;
+  top: -0px;
+  box-shadow: -20px -20px 0 white;
+}
+
+.herotop:before {
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  left: -59px;
+  top: -30px;
+  transform: skew(0, 45deg);
+  box-shadow: 0 60px 0 transparent;
+}
+
+.herotop:after {
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  right: -59px;
+  top: -30px;
+  transform: skew(0, -45deg);
+  box-shadow: 0px 60px 0 transparent;
+}
+
+.herobottom:before {
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  left: -59px;
+  top: -30px;
+  transform: skew(0, 45deg);
+  box-shadow: 0 60px 0 transparent;
+}
+
+.herobottom:after {
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  right: -59px;
+  top: -30px;
+  transform: skew(0, -45deg);
+  box-shadow: 0px 60px 0 transparent;
 }
