@@ -21,11 +21,12 @@ const SmoothScroll = ({ children }) => {
     }, []);
 
     return (
-        <main className="main fixed left-0 top-0 w-full" data-scroll-container>
+        <main className="absolute lg:fixed left-0 top-0 w-full max-h-max" data-scroll-container>
             <div>
                 {children}
             </div>
         </main>
+
     );
 };
 
