@@ -7,6 +7,7 @@ import profile1 from '../../public/profile1.webp';
 import profile2 from '../../public/profile2.webp';
 import profile3 from '../../public/profile3.webp';
 import profile4 from '../../public/profile4.webp';
+import TextAnimation from '../animations/TextAnimation';
 
 const Testimonial = () => {
     const [hoveredCard, setHoveredCard] = useState(0);
@@ -44,14 +45,14 @@ const Testimonial = () => {
 
     return (
         <section className='min-h-[600px] flex flex-col justify-center gap-10 items-center overflow-hidden'>
-            <h2>What Tell People Us People?</h2>
-            <p>We have 12K feedback from our customer</p>
+            <h2><TextAnimation text='What Tell People Us People?' /></h2>
+            <p><TextAnimation text='We have 12K feedback from our customer' /></p>
 
-            <div className={`w-full flex flex-row items-center justify-start gap-5`}>
+            <div className={`w-full flex flex-col md:flex-row items-center justify-start gap-5`}>
                 {testimonialdata?.map((data, index) => (
                     <div
                         key={data?.id}
-                        className={`transition-all duration-500 ease-in-out h-[400px] xl:h-[450px] ${hoveredCard === index ? "bg-black" : "bg-[var(--gray)]"} hover:bg-black cursor-pointer rounded-[30px] p-5 relative group overflow-hidden ${hoveredCard === index ? 'w-[450px] lg:w-[600px] z-10' : 'w-[250px] lg:w-[330px]'
+                        className={`transition-all duration-500 ease-in-out h-[250px] md:h-[400px] xl:h-[450px] ${hoveredCard === index ? "bg-black" : "bg-[var(--gray)]"} hover:bg-black cursor-pointer rounded-[30px] p-5 relative group overflow-hidden ${hoveredCard === index ? 'w-full md:w-[450px] lg:w-[600px] z-10' : 'w-full md:w-[250px] lg:w-[330px]'
                             }`}
                         onMouseEnter={() => setHoveredCard(index)}
                         onMouseLeave={() => setHoveredCard(index)}
@@ -68,7 +69,7 @@ const Testimonial = () => {
                     >
                         {/* img container */}
                         <div
-                            className={`absolute top-3 left-3 transition-all duration-500 ease-in-out rounded-[20px] overflow-hidden flex flex-col justify-between gap-3 ${hoveredCard === index ? 'w-[50%] h-[380px] xl:h-[430px]' : 'w-[100px] h-[100px]'
+                            className={`absolute top-3 left-3 transition-all duration-500 ease-in-out rounded-[20px] overflow-hidden flex flex-col justify-between gap-3 ${hoveredCard === index ? 'w-[100px] md:w-[50%] h-[100px] md:h-[380px] xl:h-[430px]' : 'w-[100px] h-[100px]'
                                 }`}
                         >
                             <img
@@ -78,7 +79,7 @@ const Testimonial = () => {
                                     }`}
                             />
                             {hoveredCard === index && (
-                                <div className='h-[50px] text-md font-semibold rounded-full px-5 bg-white w-full flex flex-row items-center justify-between'>
+                                <div className='hidden sm:flex h-[50px] text-md font-semibold rounded-full px-5 bg-white w-full flex-row items-center justify-between'>
                                     {data?.name}
                                     <div>*</div>
                                 </div>
@@ -86,13 +87,13 @@ const Testimonial = () => {
                         </div>
 
                         {/* top right date */}
-                        <div className={`${hoveredCard === index ? "hidden lg:flex" : "hidden xl:flex"} absolute top-3 right-3 px-5 h-[40px] items-center justify-center rounded-full bg-white max-w-max font-semibold text-sm`}>
+                        <div className={`${hoveredCard === index ? "flex md:hidden lg:flex" : "flex md:hidden xl:flex"} absolute top-3 right-3 px-5 h-[40px] items-center justify-center rounded-full bg-white max-w-max font-semibold text-sm`}>
                             {data?.date}
                         </div>
 
                         {/* card content */}
                         <div
-                            className={`absolute bottom-3 transition-all duration-500 ease-in-out h-[50%] rounded-[20px] ${hoveredCard === index ? 'right-3 w-[45%] pl-5' : 'left-3 w-[275px]'
+                            className={`absolute bottom-3 transition-all duration-500 ease-in-out h-[50%] rounded-[20px] ${hoveredCard === index ? 'w-[280px] md:right-3 md:w-[45%] pl-5' : 'left-3 w-[275px]'
                                 }`}
                         >
                             <img src={star.src} alt='' className='w-[70px] h-[70px] object-contain' />

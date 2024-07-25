@@ -73,7 +73,7 @@ const Package = () => {
                 </div>
 
             </div>
-k
+
             {/* right side content */}
             <div className='w-full lg:w-[35%] xl:flex-1 space-y-[50px] lg:space-y-[200px]'>
                 <div className='space-y-[50px]'>
