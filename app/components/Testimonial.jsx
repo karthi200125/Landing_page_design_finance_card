@@ -45,7 +45,7 @@ const Testimonial = () => {
 
     return (
         <section className='min-h-[600px] flex flex-col justify-center gap-10 items-center overflow-hidden'>
-            <h2><TextAnimation text='What Tell People Us People?' /></h2>
+            <h2><TextAnimation text='What People Tell Us About?' /></h2>
             <p><TextAnimation text='We have 12K feedback from our customer' /></p>
 
             <div className={`w-full flex flex-col md:flex-row items-center justify-start gap-5`}>

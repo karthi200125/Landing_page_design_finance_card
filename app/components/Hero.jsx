@@ -12,12 +12,12 @@ const Hero = () => {
 
     return (
         <section className='h-screen flex items-center justify-center p-2 sm:p-5'>
-            <div className='relative h-full w-full bg-[var(--gray)] p-2 sm:p-5 overflow-hidden sm:rounded-[30px]'>
+            <div className='relative h-full w-full bg-[var(--gray)] p-2 sm:p-5 overflow-hidden rounded-[30px]'>
 
                 {/* hero backgroun vdeio */}
-                <div className='absolute top-0 left-0 w-full h-full'>
-                    <div className="relative w-full h-full lg:h-0 lg:pb-[56.25%]" >
-                        <div className="absolute top-0 left-0 w-full h-full">
+                <div className='absolute top-0 left-0 w-full h-full bg-black'>
+                    <div className="relative w-full h-full lg:h-0 lg:pb-[56.25%] " >
+                        <div className="absolute top-0 left-0 w-full h-full ">
                             <video
                                 src={"https://res.cloudinary.com/duextvtta/video/upload/v1721810368/bg_lr4ars.mp4"}
                                 className="w-full h-full object-cover bg-black brightness-50"
@@ -104,8 +104,8 @@ const Hero = () => {
                 </div>
 
                 {/* bottom left content */}
-                <div className='hidden md:block absolute bottom-5 left-10'>
-                    <div className='relative w-[300px] h-[120px] lg:h-[150px]'>
+                <div className='absolute bottom-[15%] sm:bottom-5 w-full flex items-center justify-center sm:justify-start'>
+                    <div className='relative w-[210px] sm:w-[300px] h-[120px] lg:h-[150px] '>
                         <div className='absolute left-0 top-0 max-w-max bg-black flex flex-row items-center gap-1 p-2 lg:p-5' style={{ borderTopRightRadius: '20px', borderBottomLeftRadius: '20px', borderTopLeftRadius: '20px' }}>
                             <AvatarCircles />
                         </div>
