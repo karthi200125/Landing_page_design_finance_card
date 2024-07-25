@@ -13,7 +13,7 @@ const AvatarCircles = ({
     const avatarUrls = [profile1, profile2, profile3, profile4]
 
     return (
-        <div className={`z-10 flex -space-x-4 rtl:space-x-reverse ${className}`}>
+        <div className={`flex -space-x-4 rtl:space-x-reverse ${className}`}>
             {avatarUrls.map((url, index) => (
                 <img
                     key={index}

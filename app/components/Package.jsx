@@ -5,6 +5,7 @@ import RoundeBtn from './RoundeBtn'
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 import Button from './Button';
 import { HiMiniSpeakerWave } from "react-icons/hi2";
+import TextAnimation from '../animations/TextAnimation';
 
 
 const Package = () => {
@@ -15,7 +16,7 @@ const Package = () => {
                 {/* bottom left */}
                 <div className='packtopleft absolute top-0 left-0 max-w-max px-5 bg-[var(--white)] flex flex-row items-center gap-3' style={{ borderBottomRightRadius: "20px" }}>
                     <img src={star.src} alt="" className='w-[70px] h-[70px] object-contain' />
-                    <h4>The special one</h4>
+                    <h4><TextAnimation text="The special one" /></h4>
                 </div>
                 {/* bottom right */}
                 <div className='packbottomright absolute bottom-0 right-0 max-w-max py-3 px-5  bg-[var(--white)] flex flex-row items-center gap-3' style={{ borderTopLeftRadius: "20px" }}>
@@ -27,7 +28,7 @@ const Package = () => {
                 {/* top right */}
                 <div className='hidden sm:flex absolute top-3 right-3 w-[200px] h-[200px] rounded-[20px]  bg-[var(--white)] p-5 flex-col justify-between'>
                     <h4>Copa pack</h4>
-                    <img src={graph.src} alt="" className='w-full object-contain h-[70px]'/>
+                    <img src={graph.src} alt="" className='w-full object-contain h-[70px]' />
                     <h4 className='flex flex-row items-center justify-between'>123$
                         <RoundeBtn icon={<IoIosArrowRoundForward size={20} className='-rotate-45' />} />
                     </h4>
@@ -72,12 +73,12 @@ const Package = () => {
                 </div>
 
             </div>
-
+k
             {/* right side content */}
             <div className='w-full lg:w-[35%] xl:flex-1 space-y-[50px] lg:space-y-[200px]'>
                 <div className='space-y-[50px]'>
-                    <h2>Check Our Packages</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque voluptate, nostrum sequi exercitationem, illo suscipit quasi repellat, illum doloremque ipsa fugiat optio laboriosam ipsam accusamus tempore architecto impedit cum blanditiis.</p>
+                    <h2><TextAnimation text="Check Our Packages" /></h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque voluptate, nostrum sequi exercitationem, illo suscipit quasi repellat, illum doloremque ipsa fugiat optio laboriosam ipsam accusamus tempore architecto impedit cum blanditiis</p>
                     <div className='w-[70%] flex flex-row items-center justify-between'>
                         <span className='w-[30%] h-[4px] bg-[var(--black)] rounded-full'></span>
                         <span className='w-[30%] h-[4px] bg-[var(--gray)] rounded-full'></span>
@@ -85,7 +86,7 @@ const Package = () => {
                     </div>
                 </div>
                 <div className='flex flex-row items-center justify-between'>
-                    <Button>Explore More</Button>
+                    <Button><TextAnimation text="Explore More" /></Button>
                     <div className='flex flex-row items-center'>
                         <RoundeBtn icon={<IoIosArrowRoundBack size={25} />} />
                         <RoundeBtn icon={<IoIosArrowRoundForward size={25} />} className='bg-[var(--green)]' />

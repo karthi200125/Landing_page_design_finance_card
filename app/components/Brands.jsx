@@ -11,6 +11,8 @@ import profile2 from '../../public/profile2.webp'
 import profile3 from '../../public/profile3.webp'
 import profile4 from '../../public/profile4.webp'
 import AvatarCircles from './AvatarCircles'
+import TextAnimation from '../animations/TextAnimation'
+import { HiMiniSpeakerWave } from 'react-icons/hi2'
 
 
 const Brands = () => {
@@ -26,24 +28,26 @@ const Brands = () => {
                 {/* texts */}
                 <div className='space-y-10 text-center'>
                     <h2>
-                        Join +57k People Who Trust
-                        {/* <SparklesText
-                                text="Streamlining Your"
-                                colors={{ first: "#FF5733", second: "white" }}
-                                className="w-full"
-                                sparklesCount={5}
-                            /> */}
+                        <TextAnimation text="Join +57k People Who Trust" />
                     </h2>
                     <div className='flex flex-row items-start'>
-                        <h2>Us With Using</h2>
+                        <h2> <TextAnimation text="Us With Using" /></h2>
                         <div
                             className='relative w-[250px] h-[200px] rounded-[30px] bg-[var(--gray)] mt-[80px] mx-[-80px] md:mx-[-20px]'>
                             <div className='absolute top-[-80px] w-[60px] md:w-[100px] h-[60px] md:h-[100px] left-1/2 transform -translate-x-1/2 bg-[var(--gray)] rounded-[30px] flex items-center justify-center'>
                                 <img src={logo.src} alt="" className='w-16 h-16 object-contain' />
                             </div>
                             <div className='flex flex-row items-center gap-5 justify-center mt-[30px]'>
-                                <div className='h-[170px] w-[140px] rounded-lg bg-[var(--black)] text-white'>
-                                    visa
+                                <div className='h-[170px] w-[140px] rounded-lg bg-[var(--black)] text-white flex flex-col justify-between items-start p-3'>
+                                    <h4 className='w-full flex flex-row items-center justify-between'>
+                                        <HiMiniSpeakerWave size={20} />
+                                        VISA
+                                    </h4>
+                                    <div className='flex flex-col justify-between'>
+                                        <h3>1254</h3>
+                                        <h3>5432</h3>
+                                        <h3>3521</h3>
+                                    </div>
                                 </div>
                                 <div className='space-y-2'>
                                     <div className='w-7 h-7 rounded-full bg-yellow-500'></div>
@@ -53,7 +57,7 @@ const Brands = () => {
                                 </div>
                             </div>
                         </div>
-                        <h2>Copo Card</h2>
+                        <h2> <TextAnimation text="Copo Card" /></h2>
                     </div>
                 </div>
             </div>
