@@ -11,7 +11,7 @@ import TextAnimation from '../animations/TextAnimation'
 const Hero = () => {
 
     return (
-        <section className='h-screen flex items-center justify-center p-2 sm:p-5'>
+        <section className='h-[95vh] md:h-screen flex items-center justify-center p-2 sm:p-5'>
             <div className='relative h-full w-full bg-[var(--gray)] p-2 sm:p-5 overflow-hidden rounded-[30px]'>
 
                 {/* hero backgroun vdeio */}
@@ -105,11 +105,11 @@ const Hero = () => {
 
                 {/* bottom left content */}
                 <div className='absolute bottom-[15%] sm:bottom-5 w-full flex items-center justify-center sm:justify-start'>
-                    <div className='relative w-[210px] sm:w-[300px] h-[120px] lg:h-[150px] '>
-                        <div className='absolute left-0 top-0 max-w-max bg-black flex flex-row items-center gap-1 p-2 lg:p-5' style={{ borderTopRightRadius: '20px', borderBottomLeftRadius: '20px', borderTopLeftRadius: '20px' }}>
+                    <div className='relative w-[210px] sm:w-[320px] h-[120px] lg:h-[168px] '>
+                        <div className='absolute left-0 top-0 max-w-max glass flex flex-row items-center gap-1 p-2 lg:p-5' style={{ borderTopRightRadius: '20px', borderBottomLeftRadius: '20px', borderTopLeftRadius: '20px' }}>
                             <AvatarCircles />
                         </div>
-                        <div className='absolute bottom-0 left-3 lg:right-0 w-[200px] lg:w-[250px] bg-black flex flex-row items-center justify-center gap-5 lg:gap-10 text-white p-2 lg:p-5' style={{ borderTopRightRadius: '20px', borderBottomLeftRadius: '20px', borderBottomRightRadius: '20px' }}>
+                        <div className='absolute bottom-0 right-[-12px] lg:right-0 w-[200px] lg:w-[250px] glass flex flex-row items-center justify-center gap-5 lg:gap-10 text-white p-2 lg:p-5' style={{ borderTopRightRadius: '20px', borderBottomLeftRadius: '20px', borderBottomRightRadius: '20px' }}>
                             <h3>+57K</h3>
                             <p>people order copa cards</p>
                         </div>
