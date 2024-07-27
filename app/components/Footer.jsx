@@ -10,13 +10,13 @@ import TextAnimation from '../animations/TextAnimation';
 
 const Footer = () => {
   return (
-    <section className='relative min-h-[400px] rounded-[0px] md:rounded-[30px] flex flex-col  sm:flex-row items-center gap-10 justify-between bg-[var(--black)] text-[var(--gray)]'>
+    <section className='relative min-h-[400px] mx-4 md:mx-0 rounded-[30px] flex flex-col  sm:flex-row items-center gap-10 justify-between bg-[var(--black)] text-[var(--gray)]'>
 
       <div
-        className='footercurve absolute left-1/2 transform -translate-x-1/2 bg-white h-[50px] w-[300px] sm:w-[350px] text-black top-0 flex flex-row items-center justify-center gap-3 px-4 md:px-10'
+        className='footercurve absolute left-1/2 transform -translate-x-1/2 bg-white h-[50px] w-[80px] sm:w-[350px] text-black top-0 flex flex-row items-center justify-center gap-3 px-4 md:px-10'
         style={{ borderBottomLeftRadius: "30px", borderBottomRightRadius: '30px' }}
       >
-        <h4><TextAnimation text="Do you check anything" /></h4>
+        <h4 className="hidden sm:block"><TextAnimation text="Do you check anything" /></h4>
         <RoundeBtn icon={<IoIosArrowRoundForward size={30} />} className='custom-cursor-target' />
       </div>
 

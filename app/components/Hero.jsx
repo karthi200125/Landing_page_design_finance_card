@@ -11,7 +11,7 @@ import TextAnimation from '../animations/TextAnimation'
 const Hero = () => {
 
     return (
-        <section className='h-[95vh] md:h-screen flex items-center justify-center p-2 sm:p-5'>
+        <section className='h-[98vh] md:h-screen flex items-center justify-center p-2 sm:p-5'>
             <div className='relative h-full w-full bg-[var(--gray)] p-2 sm:p-5 overflow-hidden rounded-[30px]'>
 
                 {/* hero backgroun vdeio */}
